@@ -12,17 +12,17 @@ const Users = () => {
   };
 
   useEffect(() => {
-    // Sākotnējais datu iegūšana
+   
     fetchUserData();
 
-    // Iestatīt intervalu, lai periodiski atjauninātu datus
+   
     const intervalId = setInterval(() => {
       fetchUserData();
-    }, 1000); // 5000 milisekundes (5 sekundes)
+    }, 1000); 
 
-    // Notīrīt intervalu, kad komponents tiek iznīcināts
+ 
     return () => clearInterval(intervalId);
-  }, []); // Tukšs atkarību saraksts, tādēļ tas tiks izsaukts tikai uzreiz pēc komponenta montāžas
+  }, []); 
 
   return (
     <div>
